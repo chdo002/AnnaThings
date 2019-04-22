@@ -1,0 +1,734 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		61072A582C92B415789F2F26 /* Pods_AnnaThingsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 318385320B10097EF0ABB4F9 /* Pods_AnnaThingsUITests.framework */; };
+		B315A8C05CDFD84FEB68DAD0 /* Pods_AnnaThings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A938FE2EF553E48A1F3374B5 /* Pods_AnnaThings.framework */; };
+		E92DB599226DE28B0020C65F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92DB598226DE28B0020C65F /* AppDelegate.swift */; };
+		E92DB59B226DE28B0020C65F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92DB59A226DE28B0020C65F /* ViewController.swift */; };
+		E92DB59E226DE28B0020C65F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E92DB59C226DE28B0020C65F /* Main.storyboard */; };
+		E92DB5A0226DE28C0020C65F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E92DB59F226DE28C0020C65F /* Assets.xcassets */; };
+		E92DB5A3226DE28C0020C65F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E92DB5A1226DE28C0020C65F /* LaunchScreen.storyboard */; };
+		E92DB5AE226DE28C0020C65F /* AnnaThingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92DB5AD226DE28C0020C65F /* AnnaThingsTests.swift */; };
+		E92DB5B9226DE28C0020C65F /* AnnaThingsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92DB5B8226DE28C0020C65F /* AnnaThingsUITests.swift */; };
+		EFAA96BC2FC0DA60A8EE15A2 /* Pods_AnnaThingsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EAA223E908301785337D59B /* Pods_AnnaThingsTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E92DB5AA226DE28C0020C65F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E92DB58D226DE28B0020C65F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E92DB594226DE28B0020C65F;
+			remoteInfo = AnnaThings;
+		};
+		E92DB5B5226DE28C0020C65F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E92DB58D226DE28B0020C65F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E92DB594226DE28B0020C65F;
+			remoteInfo = AnnaThings;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		179F8BC8D152CF96BE07877F /* Pods-AnnaThingsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnnaThingsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnnaThingsTests/Pods-AnnaThingsTests.release.xcconfig"; sourceTree = "<group>"; };
+		21C84F363721386E106CCC12 /* Pods-AnnaThings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnnaThings.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnnaThings/Pods-AnnaThings.release.xcconfig"; sourceTree = "<group>"; };
+		3058C12007C03BCCE1700668 /* Pods-AnnaThings.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnnaThings.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnnaThings/Pods-AnnaThings.debug.xcconfig"; sourceTree = "<group>"; };
+		318385320B10097EF0ABB4F9 /* Pods_AnnaThingsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnnaThingsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EAA223E908301785337D59B /* Pods_AnnaThingsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnnaThingsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FD901AA9E02EC4E656EBB4E /* Pods-AnnaThingsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnnaThingsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnnaThingsTests/Pods-AnnaThingsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		56FE516F9445FE1B748D7078 /* Pods-AnnaThingsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnnaThingsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnnaThingsUITests/Pods-AnnaThingsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		57723A4C02041AFE4104C017 /* Pods-AnnaThingsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnnaThingsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnnaThingsUITests/Pods-AnnaThingsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A938FE2EF553E48A1F3374B5 /* Pods_AnnaThings.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnnaThings.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E92DB595226DE28B0020C65F /* AnnaThings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnnaThings.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E92DB598226DE28B0020C65F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E92DB59A226DE28B0020C65F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E92DB59D226DE28B0020C65F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E92DB59F226DE28C0020C65F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E92DB5A2226DE28C0020C65F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E92DB5A4226DE28C0020C65F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E92DB5A9226DE28C0020C65F /* AnnaThingsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnnaThingsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E92DB5AD226DE28C0020C65F /* AnnaThingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnaThingsTests.swift; sourceTree = "<group>"; };
+		E92DB5AF226DE28C0020C65F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E92DB5B4226DE28C0020C65F /* AnnaThingsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnnaThingsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E92DB5B8226DE28C0020C65F /* AnnaThingsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnaThingsUITests.swift; sourceTree = "<group>"; };
+		E92DB5BA226DE28C0020C65F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E92DB592226DE28B0020C65F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B315A8C05CDFD84FEB68DAD0 /* Pods_AnnaThings.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E92DB5A6226DE28C0020C65F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFAA96BC2FC0DA60A8EE15A2 /* Pods_AnnaThingsTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E92DB5B1226DE28C0020C65F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61072A582C92B415789F2F26 /* Pods_AnnaThingsUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		128DB2DD743AB2B3E1A6A9E4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3058C12007C03BCCE1700668 /* Pods-AnnaThings.debug.xcconfig */,
+				21C84F363721386E106CCC12 /* Pods-AnnaThings.release.xcconfig */,
+				4FD901AA9E02EC4E656EBB4E /* Pods-AnnaThingsTests.debug.xcconfig */,
+				179F8BC8D152CF96BE07877F /* Pods-AnnaThingsTests.release.xcconfig */,
+				57723A4C02041AFE4104C017 /* Pods-AnnaThingsUITests.debug.xcconfig */,
+				56FE516F9445FE1B748D7078 /* Pods-AnnaThingsUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		68406E9F4D171BCA3D2FF48C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A938FE2EF553E48A1F3374B5 /* Pods_AnnaThings.framework */,
+				3EAA223E908301785337D59B /* Pods_AnnaThingsTests.framework */,
+				318385320B10097EF0ABB4F9 /* Pods_AnnaThingsUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E92DB58C226DE28B0020C65F = {
+			isa = PBXGroup;
+			children = (
+				E92DB597226DE28B0020C65F /* AnnaThings */,
+				E92DB5AC226DE28C0020C65F /* AnnaThingsTests */,
+				E92DB5B7226DE28C0020C65F /* AnnaThingsUITests */,
+				E92DB596226DE28B0020C65F /* Products */,
+				128DB2DD743AB2B3E1A6A9E4 /* Pods */,
+				68406E9F4D171BCA3D2FF48C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E92DB596226DE28B0020C65F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E92DB595226DE28B0020C65F /* AnnaThings.app */,
+				E92DB5A9226DE28C0020C65F /* AnnaThingsTests.xctest */,
+				E92DB5B4226DE28C0020C65F /* AnnaThingsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E92DB597226DE28B0020C65F /* AnnaThings */ = {
+			isa = PBXGroup;
+			children = (
+				E92DB598226DE28B0020C65F /* AppDelegate.swift */,
+				E92DB59A226DE28B0020C65F /* ViewController.swift */,
+				E92DB59C226DE28B0020C65F /* Main.storyboard */,
+				E92DB59F226DE28C0020C65F /* Assets.xcassets */,
+				E92DB5A1226DE28C0020C65F /* LaunchScreen.storyboard */,
+				E92DB5A4226DE28C0020C65F /* Info.plist */,
+			);
+			path = AnnaThings;
+			sourceTree = "<group>";
+		};
+		E92DB5AC226DE28C0020C65F /* AnnaThingsTests */ = {
+			isa = PBXGroup;
+			children = (
+				E92DB5AD226DE28C0020C65F /* AnnaThingsTests.swift */,
+				E92DB5AF226DE28C0020C65F /* Info.plist */,
+			);
+			path = AnnaThingsTests;
+			sourceTree = "<group>";
+		};
+		E92DB5B7226DE28C0020C65F /* AnnaThingsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E92DB5B8226DE28C0020C65F /* AnnaThingsUITests.swift */,
+				E92DB5BA226DE28C0020C65F /* Info.plist */,
+			);
+			path = AnnaThingsUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E92DB594226DE28B0020C65F /* AnnaThings */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E92DB5BD226DE28C0020C65F /* Build configuration list for PBXNativeTarget "AnnaThings" */;
+			buildPhases = (
+				6E305D97C1CC3D899DC9BA0A /* [CP] Check Pods Manifest.lock */,
+				E92DB591226DE28B0020C65F /* Sources */,
+				E92DB592226DE28B0020C65F /* Frameworks */,
+				E92DB593226DE28B0020C65F /* Resources */,
+				8423698B0D2949DC3035C79F /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AnnaThings;
+			productName = AnnaThings;
+			productReference = E92DB595226DE28B0020C65F /* AnnaThings.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E92DB5A8226DE28C0020C65F /* AnnaThingsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E92DB5C0226DE28C0020C65F /* Build configuration list for PBXNativeTarget "AnnaThingsTests" */;
+			buildPhases = (
+				3EA303DBAD467399BA7EFF1C /* [CP] Check Pods Manifest.lock */,
+				E92DB5A5226DE28C0020C65F /* Sources */,
+				E92DB5A6226DE28C0020C65F /* Frameworks */,
+				E92DB5A7226DE28C0020C65F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E92DB5AB226DE28C0020C65F /* PBXTargetDependency */,
+			);
+			name = AnnaThingsTests;
+			productName = AnnaThingsTests;
+			productReference = E92DB5A9226DE28C0020C65F /* AnnaThingsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E92DB5B3226DE28C0020C65F /* AnnaThingsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E92DB5C3226DE28C0020C65F /* Build configuration list for PBXNativeTarget "AnnaThingsUITests" */;
+			buildPhases = (
+				FE77AFCBD742DB91E2A8A706 /* [CP] Check Pods Manifest.lock */,
+				E92DB5B0226DE28C0020C65F /* Sources */,
+				E92DB5B1226DE28C0020C65F /* Frameworks */,
+				E92DB5B2226DE28C0020C65F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E92DB5B6226DE28C0020C65F /* PBXTargetDependency */,
+			);
+			name = AnnaThingsUITests;
+			productName = AnnaThingsUITests;
+			productReference = E92DB5B4226DE28C0020C65F /* AnnaThingsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E92DB58D226DE28B0020C65F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = chdo;
+				TargetAttributes = {
+					E92DB594226DE28B0020C65F = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					E92DB5A8226DE28C0020C65F = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = E92DB594226DE28B0020C65F;
+					};
+					E92DB5B3226DE28C0020C65F = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = E92DB594226DE28B0020C65F;
+					};
+				};
+			};
+			buildConfigurationList = E92DB590226DE28B0020C65F /* Build configuration list for PBXProject "AnnaThings" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E92DB58C226DE28B0020C65F;
+			productRefGroup = E92DB596226DE28B0020C65F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E92DB594226DE28B0020C65F /* AnnaThings */,
+				E92DB5A8226DE28C0020C65F /* AnnaThingsTests */,
+				E92DB5B3226DE28C0020C65F /* AnnaThingsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E92DB593226DE28B0020C65F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E92DB5A3226DE28C0020C65F /* LaunchScreen.storyboard in Resources */,
+				E92DB5A0226DE28C0020C65F /* Assets.xcassets in Resources */,
+				E92DB59E226DE28B0020C65F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E92DB5A7226DE28C0020C65F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E92DB5B2226DE28C0020C65F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3EA303DBAD467399BA7EFF1C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AnnaThingsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E305D97C1CC3D899DC9BA0A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AnnaThings-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8423698B0D2949DC3035C79F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AnnaThings/Pods-AnnaThings-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AnnaThings/Pods-AnnaThings-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE77AFCBD742DB91E2A8A706 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AnnaThingsUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E92DB591226DE28B0020C65F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E92DB59B226DE28B0020C65F /* ViewController.swift in Sources */,
+				E92DB599226DE28B0020C65F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E92DB5A5226DE28C0020C65F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E92DB5AE226DE28C0020C65F /* AnnaThingsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E92DB5B0226DE28C0020C65F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E92DB5B9226DE28C0020C65F /* AnnaThingsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E92DB5AB226DE28C0020C65F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E92DB594226DE28B0020C65F /* AnnaThings */;
+			targetProxy = E92DB5AA226DE28C0020C65F /* PBXContainerItemProxy */;
+		};
+		E92DB5B6226DE28C0020C65F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E92DB594226DE28B0020C65F /* AnnaThings */;
+			targetProxy = E92DB5B5226DE28C0020C65F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E92DB59C226DE28B0020C65F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E92DB59D226DE28B0020C65F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E92DB5A1226DE28C0020C65F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E92DB5A2226DE28C0020C65F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E92DB5BB226DE28C0020C65F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E92DB5BC226DE28C0020C65F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E92DB5BE226DE28C0020C65F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3058C12007C03BCCE1700668 /* Pods-AnnaThings.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 62N6ZZKK9A;
+				INFOPLIST_FILE = AnnaThings/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = chdo.AnnaThings;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E92DB5BF226DE28C0020C65F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21C84F363721386E106CCC12 /* Pods-AnnaThings.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 62N6ZZKK9A;
+				INFOPLIST_FILE = AnnaThings/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = chdo.AnnaThings;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E92DB5C1226DE28C0020C65F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FD901AA9E02EC4E656EBB4E /* Pods-AnnaThingsTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 62N6ZZKK9A;
+				INFOPLIST_FILE = AnnaThingsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = chdo.AnnaThingsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnnaThings.app/AnnaThings";
+			};
+			name = Debug;
+		};
+		E92DB5C2226DE28C0020C65F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 179F8BC8D152CF96BE07877F /* Pods-AnnaThingsTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 62N6ZZKK9A;
+				INFOPLIST_FILE = AnnaThingsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = chdo.AnnaThingsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnnaThings.app/AnnaThings";
+			};
+			name = Release;
+		};
+		E92DB5C4226DE28C0020C65F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57723A4C02041AFE4104C017 /* Pods-AnnaThingsUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 62N6ZZKK9A;
+				INFOPLIST_FILE = AnnaThingsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = chdo.AnnaThingsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AnnaThings;
+			};
+			name = Debug;
+		};
+		E92DB5C5226DE28C0020C65F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56FE516F9445FE1B748D7078 /* Pods-AnnaThingsUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 62N6ZZKK9A;
+				INFOPLIST_FILE = AnnaThingsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = chdo.AnnaThingsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AnnaThings;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E92DB590226DE28B0020C65F /* Build configuration list for PBXProject "AnnaThings" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E92DB5BB226DE28C0020C65F /* Debug */,
+				E92DB5BC226DE28C0020C65F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E92DB5BD226DE28C0020C65F /* Build configuration list for PBXNativeTarget "AnnaThings" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E92DB5BE226DE28C0020C65F /* Debug */,
+				E92DB5BF226DE28C0020C65F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E92DB5C0226DE28C0020C65F /* Build configuration list for PBXNativeTarget "AnnaThingsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E92DB5C1226DE28C0020C65F /* Debug */,
+				E92DB5C2226DE28C0020C65F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E92DB5C3226DE28C0020C65F /* Build configuration list for PBXNativeTarget "AnnaThingsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E92DB5C4226DE28C0020C65F /* Debug */,
+				E92DB5C5226DE28C0020C65F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E92DB58D226DE28B0020C65F /* Project object */;
+}
