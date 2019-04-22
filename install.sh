@@ -2,7 +2,7 @@
 
 echo `pwd`
 
-cd /Users/chdo/Desktop/AnnaThings
+cd /Users/chdo/Documents/Github/AnnaThings
 
 pod install
 

@@ -10,12 +10,12 @@
 		61072A582C92B415789F2F26 /* Pods_AnnaThingsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 318385320B10097EF0ABB4F9 /* Pods_AnnaThingsUITests.framework */; };
 		B315A8C05CDFD84FEB68DAD0 /* Pods_AnnaThings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A938FE2EF553E48A1F3374B5 /* Pods_AnnaThings.framework */; };
 		E92DB599226DE28B0020C65F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92DB598226DE28B0020C65F /* AppDelegate.swift */; };
-		E92DB59B226DE28B0020C65F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92DB59A226DE28B0020C65F /* ViewController.swift */; };
 		E92DB59E226DE28B0020C65F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E92DB59C226DE28B0020C65F /* Main.storyboard */; };
 		E92DB5A0226DE28C0020C65F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E92DB59F226DE28C0020C65F /* Assets.xcassets */; };
 		E92DB5A3226DE28C0020C65F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E92DB5A1226DE28C0020C65F /* LaunchScreen.storyboard */; };
 		E92DB5AE226DE28C0020C65F /* AnnaThingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92DB5AD226DE28C0020C65F /* AnnaThingsTests.swift */; };
 		E92DB5B9226DE28C0020C65F /* AnnaThingsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92DB5B8226DE28C0020C65F /* AnnaThingsUITests.swift */; };
+		E92DB5C7226DE4C20020C65F /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92DB5C6226DE4C20020C65F /* TableViewController.swift */; };
 		EFAA96BC2FC0DA60A8EE15A2 /* Pods_AnnaThingsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EAA223E908301785337D59B /* Pods_AnnaThingsTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,7 +48,6 @@
 		A938FE2EF553E48A1F3374B5 /* Pods_AnnaThings.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnnaThings.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E92DB595226DE28B0020C65F /* AnnaThings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnnaThings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E92DB598226DE28B0020C65F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E92DB59A226DE28B0020C65F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E92DB59D226DE28B0020C65F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E92DB59F226DE28C0020C65F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E92DB5A2226DE28C0020C65F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,6 +58,7 @@
 		E92DB5B4226DE28C0020C65F /* AnnaThingsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnnaThingsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E92DB5B8226DE28C0020C65F /* AnnaThingsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnaThingsUITests.swift; sourceTree = "<group>"; };
 		E92DB5BA226DE28C0020C65F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E92DB5C6226DE4C20020C65F /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,7 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				E92DB598226DE28B0020C65F /* AppDelegate.swift */,
-				E92DB59A226DE28B0020C65F /* ViewController.swift */,
+				E92DB5C6226DE4C20020C65F /* TableViewController.swift */,
 				E92DB59C226DE28B0020C65F /* Main.storyboard */,
 				E92DB59F226DE28C0020C65F /* Assets.xcassets */,
 				E92DB5A1226DE28C0020C65F /* LaunchScreen.storyboard */,
@@ -393,8 +393,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E92DB59B226DE28B0020C65F /* ViewController.swift in Sources */,
 				E92DB599226DE28B0020C65F /* AppDelegate.swift in Sources */,
+				E92DB5C7226DE4C20020C65F /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
