@@ -13,6 +13,10 @@ func lastIncident(type: Incident.IncidentType) -> Incident? {
     return res
 }
 
+func incidentsBy(){
+    
+}
+
 private func realm() -> Realm{
     let rl = try! Realm()
     return rl
