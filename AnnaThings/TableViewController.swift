@@ -18,7 +18,17 @@ class TableViewController: UITableViewController {
     }
 
     fileprivate func savePee() {
-        Alert(title: "本王要嘘嘘了", message: nil).addAction(UIAlertAction(title: "确定", style: .default, handler: { (_) in
+      
+        Alert(title: "💦本王要嘘嘘了", message: nil).addAction(UIAlertAction(title: "确定", style: .default, handler: { (_) in
+            if let lastPee = lastIncident(type: Incident.IncidentType.pee) {
+                let now = NSDate()
+                let inter = now.timeIntervalSince(lastPee.time!)
+                if inter < 60 * 3 {
+                    HUD.flash(HUDContentType.labeledError(title: "💦是不是才尿过？", subtitle: nil), delay: 1)
+                    return
+                }
+            }
+            
             HUD.flash(HUDContentType.success, delay: 0.5)
             let inci = Incident()
             inci.time = Date()
@@ -30,7 +40,16 @@ class TableViewController: UITableViewController {
     }
     
     fileprivate func savePoo() {
-        Alert(title: "本王要噗噗了", message: nil).addAction(UIAlertAction(title: "确定", style: .default, handler: { (_) in
+        
+        Alert(title: "💩本王要噗噗了", message: nil).addAction(UIAlertAction(title: "确定", style: .default, handler: { (_) in
+            if let lastPuu = lastIncident(type: Incident.IncidentType.pupu) {
+                let now = NSDate()
+                let inter = now.timeIntervalSince(lastPuu.time!)
+                if inter < 60 * 3 {
+                    HUD.flash(HUDContentType.labeledError(title: "💩是不是才拉过？", subtitle: nil), delay: 1)
+                    return
+                }
+            }
             HUD.flash(HUDContentType.success, delay: 0.5)
             let inci = Incident()
             inci.time = Date()

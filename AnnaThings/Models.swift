@@ -8,6 +8,16 @@
 
 import RealmSwift
 
+func lastIncident(type: Incident.IncidentType) -> Incident? {
+    let res = realm().objects(Incident.self).filter("type = %@", type.rawValue).sorted(byKeyPath: "time").last
+    return res
+}
+
+private func realm() -> Realm{
+    let rl = try! Realm()
+    return rl
+}
+
 class Incident: Object {
     
     enum IncidentType: Int8 {

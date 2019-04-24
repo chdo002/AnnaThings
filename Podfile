@@ -2,6 +2,7 @@
  platform :ios, '11.0'
 
 use_modular_headers!
+inhibit_all_warnings!
 
 target 'AnnaThings' do
   
@@ -9,6 +10,8 @@ target 'AnnaThings' do
   pod 'RealmSwift'
   pod 'PKHUD', '~> 5.0'
   pod 'Charts'
+  pod 'SnapKit'
+  pod 'SwiftDate'
   
 #  pod 'ChartsRealm'
 
