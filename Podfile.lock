@@ -1,0 +1,40 @@
+PODS:
+  - Charts (3.2.2):
+    - Charts/Core (= 3.2.2)
+  - Charts/Core (3.2.2)
+  - PKHUD (5.2.1)
+  - Realm (3.14.0):
+    - Realm/Headers (= 3.14.0)
+  - Realm/Headers (3.14.0)
+  - RealmSwift (3.14.0):
+    - Realm (= 3.14.0)
+  - SnapKit (4.2.0)
+  - SwiftDate (6.0.1)
+
+DEPENDENCIES:
+  - Charts
+  - PKHUD (~> 5.0)
+  - RealmSwift
+  - SnapKit
+  - SwiftDate
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Charts
+    - PKHUD
+    - Realm
+    - RealmSwift
+    - SnapKit
+    - SwiftDate
+
+SPEC CHECKSUMS:
+  Charts: f69cf0518b6d1d62608ca504248f1bbe0b6ae77e
+  PKHUD: 4e6162c4c39ac367c6934e9855c6b4762ee16256
+  Realm: 221b25919bb5a010a3c597d707f8df3492dcd93a
+  RealmSwift: 28f22dfa6a27b9a778cfb09471558b6afcf1022c
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  SwiftDate: 2b3ef6b8fc30c22391033d1acad5622a51660016
+
+PODFILE CHECKSUM: 69e7eca5fc1fb17c8a7bbdf504ba716e1e46eb6b
+
+COCOAPODS: 1.5.3

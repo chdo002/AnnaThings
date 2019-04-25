@@ -21,20 +21,23 @@ class DataViewController: UIViewController {
     func setUpView(){
         view.backgroundColor = UIColor.white
         
-        let seg = UISegmentedControl(items: [Incident.DataTimeIntervalType.Year.rawValue,
-                                             Incident.DataTimeIntervalType.Month.rawValue,
+        let seg = UISegmentedControl(items: [Incident.DataTimeIntervalType.Day.rawValue,
                                              Incident.DataTimeIntervalType.Week.rawValue,
-                                             Incident.DataTimeIntervalType.Day.rawValue])
+                                             Incident.DataTimeIntervalType.Month.rawValue
+                                             ])
         view.addSubview(seg)
+        
         seg.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(74)
             make.leading.equalToSuperview().offset(10)
             make.trailing.equalToSuperview().offset(-10)
         }
-        seg.selectedSegmentIndex = 3;
+        
+        seg.selectedSegmentIndex = 0;
+        
         seg.addTarget(self, action: #selector(tapSeg(_:)), for: .valueChanged)
         
-        let dic = incidentsSeprateBy(intervelType: Incident.DataTimeIntervalType.Day)
+        let dic = incidentsSeprateBy(intervelType: .Day)
         
     }
     

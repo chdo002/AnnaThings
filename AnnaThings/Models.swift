@@ -14,25 +14,19 @@ func lastIncident(type: Incident.IncidentType) -> Incident? {
     return res
 }
 
-func incidentsSeprateBy(intervelType: Incident.DataTimeIntervalType) -> [Date: [Incident]]{
+func incidentsSeprateBy(intervelType: Incident.DataTimeIntervalType) -> [String: [Incident]]{
+    
     let res = realm().objects(Incident.self)
-    return Dictionary(grouping: res) { (ele) -> Date in
-        
-        var format: String?
+    
+    return Dictionary(grouping: res) { (ele) -> String in
+    
         switch intervelType {
-        case .Year:
-            format = "yyyy"
-        case .Month:
-            format = "yyyy-MM"
         case .Day:
-            format = "yyyy-MM-dd"
+            return ele.time.dateAt(DateRelatedType.startOfDay).toFormat("yyyy-MM-dd")
+        case .Month:
+            return ele.time.dateAt(DateRelatedType.startOfMonth).toFormat("yyyy-MM-dd")
         case .Week:
-            format = nil
-        }
-        if let form = format {
-            return ele.time.toFormat(form).toDate()!.date
-        } else {
-            return ele.time.dateAt(.startOfWeek)
+            return ele.time.dateAt(DateRelatedType.startOfWeek).toFormat("yyyy-MM-dd")
         }
     }
 }
@@ -50,7 +44,6 @@ class Incident: Object {
     }
     
     enum DataTimeIntervalType: String {
-        case Year = "年"
         case Month = "月"
         case Week = "周"
         case Day = "日"
