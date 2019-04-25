@@ -18,20 +18,13 @@ class DataViewController: UIViewController {
         setUpView()
     }
     
-    enum DataTimeIntervalType: String {
-        case Year = "年"
-        case Month = "月"
-        case Week = "周"
-        case Day = "日"
-    }
-    
     func setUpView(){
         view.backgroundColor = UIColor.white
         
-        let seg = UISegmentedControl(items: [DataTimeIntervalType.Year.rawValue,
-                                             DataTimeIntervalType.Month.rawValue,
-                                             DataTimeIntervalType.Week.rawValue,
-                                             DataTimeIntervalType.Day.rawValue])
+        let seg = UISegmentedControl(items: [Incident.DataTimeIntervalType.Year.rawValue,
+                                             Incident.DataTimeIntervalType.Month.rawValue,
+                                             Incident.DataTimeIntervalType.Week.rawValue,
+                                             Incident.DataTimeIntervalType.Day.rawValue])
         view.addSubview(seg)
         seg.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(74)
@@ -40,6 +33,9 @@ class DataViewController: UIViewController {
         }
         seg.selectedSegmentIndex = 3;
         seg.addTarget(self, action: #selector(tapSeg(_:)), for: .valueChanged)
+        
+        let dic = incidentsSeprateBy(intervelType: Incident.DataTimeIntervalType.Day)
+        
     }
     
     @objc func tapSeg(_ seg: UISegmentedControl) {
