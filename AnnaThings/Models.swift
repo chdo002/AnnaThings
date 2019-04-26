@@ -9,7 +9,7 @@
 import RealmSwift
 import SwiftDate
 
-func lastIncident(type: Incident.IncidentType) -> Incident? {
+func latestIncident(type: Incident.IncidentType) -> Incident? {
     let res = realm().objects(Incident.self).filter("type = %@", type.rawValue).sorted(byKeyPath: "time").last
     return res
 }
@@ -22,11 +22,11 @@ func incidentsSeprateBy(intervelType: Incident.DataTimeIntervalType) -> [String:
     
         switch intervelType {
         case .Day:
-            return ele.time.dateAt(DateRelatedType.startOfDay).toFormat("yyyy-MM-dd")
+            return ele.time.dateAt(DateRelatedType.startOfDay).toFormat(Incident.DateFormat)
         case .Month:
-            return ele.time.dateAt(DateRelatedType.startOfMonth).toFormat("yyyy-MM-dd")
+            return ele.time.dateAt(DateRelatedType.startOfMonth).toFormat(Incident.DateFormat)
         case .Week:
-            return ele.time.dateAt(DateRelatedType.startOfWeek).toFormat("yyyy-MM-dd")
+            return ele.time.dateAt(DateRelatedType.startOfWeek).toFormat(Incident.DateFormat)
         }
     }
 }
@@ -48,6 +48,8 @@ class Incident: Object {
         case Week = "周"
         case Day = "日"
     }
+    
+    static let DateFormat = "yyyy-MM-dd-HH-mm"
     
     @objc dynamic var time: Date = Date()
     @objc dynamic var type: Int8 = IncidentType.pee.rawValue

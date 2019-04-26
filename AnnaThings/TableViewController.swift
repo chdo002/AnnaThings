@@ -20,7 +20,7 @@ class TableViewController: UITableViewController {
     fileprivate func savePee() {
       
         Alert(title: "💦本王要嘘嘘了", message: nil).addAction(UIAlertAction(title: "确定", style: .default, handler: { (_) in
-            if let lastPee = lastIncident(type: .pee) {
+            if let lastPee = latestIncident(type: .pee) {
                 let inter = -lastPee.time.timeIntervalSinceNow
                 if inter < 60 * 3 {
                     HUD.flash(HUDContentType.labeledError(title: "💦是不是才尿过？", subtitle: nil), delay: 1)
@@ -40,7 +40,7 @@ class TableViewController: UITableViewController {
     fileprivate func savePoo() {
         
         Alert(title: "💩本王要噗噗了", message: nil).addAction(UIAlertAction(title: "确定", style: .default, handler: { (_) in
-            if let lastPuu = lastIncident(type: .pupu) {
+            if let lastPuu = latestIncident(type: .pupu) {
                 let inter = -lastPuu.time.timeIntervalSinceNow
                 if inter < 60 * 3 {
                     HUD.flash(HUDContentType.labeledError(title: "💩是不是才拉过？", subtitle: nil), delay: 1)
