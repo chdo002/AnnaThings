@@ -1,14 +1,14 @@
 PODS:
-  - Charts (3.3):
-    - Charts/Core (= 3.3)
-  - Charts/Core (3.3)
+  - Charts (3.3.0):
+    - Charts/Core (= 3.3.0)
+  - Charts/Core (3.3.0)
   - PKHUD (5.2.1)
-  - Realm (3.14.1):
-    - Realm/Headers (= 3.14.1)
-  - Realm/Headers (3.14.1)
-  - RealmSwift (3.14.1):
-    - Realm (= 3.14.1)
-  - SnapKit (4.2.0)
+  - Realm (3.14.2):
+    - Realm/Headers (= 3.14.2)
+  - Realm/Headers (3.14.2)
+  - RealmSwift (3.14.2):
+    - Realm (= 3.14.2)
+  - SnapKit (5.0.0)
   - SwiftDate (6.0.2)
 
 DEPENDENCIES:
@@ -28,11 +28,11 @@ SPEC REPOS:
     - SwiftDate
 
 SPEC CHECKSUMS:
-  Charts: a5609adcbd70a0f7e15c6984d7e9b5ceecf3b71d
+  Charts: ec1f57f9340054155691e84d4544a1d239d382c5
   PKHUD: 4e6162c4c39ac367c6934e9855c6b4762ee16256
-  Realm: e12c9c2387d05c5bba3a9c394838f5870e85763b
-  RealmSwift: a82eab9b04c3e1616082c7e17aa300740847769c
-  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  Realm: 179c6706e3a49dbfe112e572fd3c03d3169bea35
+  RealmSwift: 1797f272fb51c555b764fada32e82159a2c65247
+  SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
   SwiftDate: bbed9b23bfec599bd62b9a305afc554f7bd0eb6f
 
 PODFILE CHECKSUM: 69e7eca5fc1fb17c8a7bbdf504ba716e1e46eb6b
