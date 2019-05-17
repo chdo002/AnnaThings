@@ -232,6 +232,7 @@
 				TargetAttributes = {
 					E92DB594226DE28B0020C65F = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 					E92DB5A8226DE28C0020C65F = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -522,6 +523,7 @@
 			baseConfigurationReference = 3058C12007C03BCCE1700668 /* Pods-AnnaThings.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 62N6ZZKK9A;
 				INFOPLIST_FILE = AnnaThings/Info.plist;
@@ -532,6 +534,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = chdo.AnnaThings;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -542,6 +545,7 @@
 			baseConfigurationReference = 21C84F363721386E106CCC12 /* Pods-AnnaThings.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 62N6ZZKK9A;
 				INFOPLIST_FILE = AnnaThings/Info.plist;

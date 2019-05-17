@@ -13,9 +13,19 @@ import SwiftDate
 
 class DataViewController: UIViewController {
     
+    let collectoinView = HorizontalCollectionView()
+    
+    let dataSource = IncidentData()
+    
+    var period :TimePeriod {
+        return TimePeriod(start: dataSource.incidentBoundary.0!.time.inDefaultRegion(),
+                          end: dataSource.incidentBoundary.1!.time.inDefaultRegion())
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setUpView()
     }
     
@@ -36,109 +46,61 @@ class DataViewController: UIViewController {
         seg.addTarget(self, action: #selector(tapSeg(_:)), for: .valueChanged)
         
         // chartView
-        let period = TimePeriod(end: DateInRegion(), duration: 1.months + 2.weeks)
-        
-        let sd = IncidentData().incidentInTimePeriod(peroid: period,
-                                                     type: .Week)
-        
-        let vv = HorizontalCollectionView()
-        view.addSubview(vv)
-        vv.snp.makeConstraints { (make) in
+        view.addSubview(collectoinView)
+        collectoinView.snp.makeConstraints { (make) in
             make.leading.trailing.equalTo(seg)
             make.top.equalTo(seg.snp.bottom).offset(30)
             make.height.equalTo(200)
         }
         
-//        let res = incidentsSeprateBy(intervelType: .Week)
-        
-//        let dic : [String: [Incident]] = res.1
-//
-//        let boundary:(Incident?, Incident?) = res.0
-//
-//        guard let start = boundary.0, let end = boundary.1 else {
-//            return
-//        }
-//
-//        // 开始日期
-//        let ss = start.time.dateAt(.startOfWeek)
-//
-//        // 结束日期
-//        let ee = end.time.dateAt(.endOfWeek)
-//
-//        var bol = false
-//        var currentDate = ss
-//        var dates = [Date]()
-//        repeat {
-//            dates.append(currentDate)
-//            let next = currentDate.dateAt(.tomorrow)
-//            currentDate = next
-//            bol = next.isBeforeDate(ee, orEqual: true, granularity: .day)
-//        } while bol
-//
-//        let yVals = (0..<dates.count).map { (i) -> BarChartDataEntry in
-//
-//            return BarChartDataEntry(x: Double(i), y: 1)
-//        }
+        tapSeg(seg)
     }
     
     
     @objc func tapSeg(_ seg: UISegmentedControl) {
-        
+        // 数据时间段
+        collectoinView.intervalType = seg.intervalType
+        collectoinView.incidentDataSource = dataSource.incidentInTimePeriod(peroid: period,
+                                                                            type: seg.intervalType)
     }
 }
 
+extension UISegmentedControl {
+    var intervalType : IncidentData.DataTimeIntervalType {
+        var type = IncidentData.DataTimeIntervalType.Week
+        if self.selectedSegmentIndex == 0 {
+            type = .Day
+        } else if self.selectedSegmentIndex == 1 {
+            type = .Week
+        } else if self.selectedSegmentIndex == 1 {
+            type = .Month
+        }
+        return type
+    }
+}
 
+// MARK: - 表格
 class HorizontalCollectionView: UICollectionView, UICollectionViewDataSource ,UICollectionViewDelegate {
     
-    class Cell: UICollectionViewCell {
-        
-        var chartView: BarChartView!
-        
-        override init(frame: CGRect) {
-            super.init(frame: frame)
-            
-            chartView = BarChartView(frame: CGRect.zero)
-            addSubview(chartView)
-            chartView.snp.makeConstraints { (make) in
-                make.edges.equalToSuperview()
-            }
+    private var _dataSource: [String: [Incident]] = [:]
+    private var _chartNames:[String] = []
+    
+    var intervalType = IncidentData.DataTimeIntervalType.Week
+    
+    var incidentDataSource: [String: [Incident]] {
+        set {
+            _dataSource = newValue
+            _chartNames = newValue.keys.sorted(by: { (a, b) -> Bool in
+                return a < b
+            })
+            reloadData()
         }
-        
-        func set(){
-            if tag % 2 == 0 {
-                backgroundColor = .blue
-            } else {
-                backgroundColor = .gray
-            }
-        }
-        
-        func setData(_ yVals: [BarChartDataEntry]) {
-            
-            var set1: BarChartDataSet! = nil
-            if let set = chartView.data?.dataSets.first as? BarChartDataSet {
-                set1 = set
-                set1.replaceEntries(yVals)
-                chartView.data?.notifyDataChanged()
-                chartView.notifyDataSetChanged()
-            } else {
-                set1 = BarChartDataSet(entries: yVals, label: "The year 2017")
-                set1.colors = ChartColorTemplates.material()
-                set1.drawValuesEnabled = false
-                
-                let data = BarChartData(dataSet: set1)
-                data.setValueFont(UIFont(name: "HelveticaNeue-Light", size: 10)!)
-                data.barWidth = 0.9
-                chartView.data = data
-            }
-        }
-        
-        required init?(coder aDecoder: NSCoder) {
-            super.init(coder: aDecoder)
+        get {
+            return _dataSource
         }
     }
     
     init() {
-        
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         layout.itemSize = CGSize(width: UIScreen.main.bounds.width - 20, height: 200)
@@ -160,12 +122,71 @@ class HorizontalCollectionView: UICollectionView, UICollectionViewDataSource ,UI
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! Cell
-        cell.tag = indexPath.row
-        cell.set()
+        if let incidents =  _dataSource[_chartNames[indexPath.row]] {
+            cell.setUpdata(incidents: incidents, intervalType: intervalType)
+        }
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 13
+        return incidentDataSource.count
     }
+    
+    // MARK: 表格CEll
+    class Cell: UICollectionViewCell {
+        
+        var chartView: BarChartView!
+        
+        override init(frame: CGRect) {
+            super.init(frame: frame)
+            
+            chartView = BarChartView(frame: CGRect.zero)
+            addSubview(chartView)
+            chartView.snp.makeConstraints { (make) in
+                make.edges.equalToSuperview()
+            }
+        }
+        
+        func setUpdata(incidents:[Incident], intervalType: IncidentData.DataTimeIntervalType) {
+            
+            let dic = incidents.incidentsSeprateBy(type: intervalType.decentType)
+            
+            let _chartNames = dic.keys.sorted(by: { (a, b) -> Bool in
+                return a < b
+            })
+            
+            var yVals = [BarChartDataEntry]()
+            
+            for (index, name) in _chartNames.enumerated() {
+                let data = BarChartDataEntry(x: Double(index), y: Double(dic[name]!.count), data: dic[name]!)
+                yVals.append(data)
+            }
+            setData(yVals)
+        }
+        
+        func setData(_ yVals: [BarChartDataEntry]) {
+            
+            var set1: BarChartDataSet! = nil
+            if let set = chartView.data?.dataSets.first as? BarChartDataSet {
+                set1 = set
+                set1.replaceEntries(yVals)
+                chartView.data?.notifyDataChanged()
+                chartView.notifyDataSetChanged()
+            } else {
+                set1 = BarChartDataSet(entries: yVals, label: "The year 2017")
+                set1.colors = ChartColorTemplates.material()
+                set1.drawValuesEnabled = false
+                
+                let data = BarChartData(dataSet: set1)
+                data.setValueFont(UIFont(name: "HelveticaNeue-Light", size: 10)!)
+                data.barWidth = 0.2
+                chartView.data = data
+            }
+        }
+        
+        required init?(coder aDecoder: NSCoder) {
+            super.init(coder: aDecoder)
+        }
+    }
+    
 }

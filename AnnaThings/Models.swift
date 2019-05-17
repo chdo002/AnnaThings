@@ -19,9 +19,23 @@ func latestIncident(type: Incident.IncidentType) -> Incident? {
 struct IncidentData {
     
     enum DataTimeIntervalType: String {
+        
         case Month = "月"
         case Week = "周"
         case Day = "日"
+        case Hour = "小时"
+        
+        var decentType:  IncidentData.DataTimeIntervalType{
+            switch self {
+            case .Month:
+                return .Day
+            case .Week:
+                return .Day
+            case .Day, .Hour:
+                return .Hour
+            }
+        }
+            
     }
     
     private var incidents : Results<Incident>!
@@ -37,17 +51,32 @@ struct IncidentData {
     
     static let DateFormat = "yyyy-MM-dd-HH-mm"
     
-    func incidentInTimePeriod(peroid timePeroid: TimePeriod, type: DataTimeIntervalType) -> [String: [Incident]]{
+    /// 获取某段时间内的事件
+    ///
+    /// - Parameters:
+    ///   - timePeroid: 搜索事件的时间范围
+    ///   - type: 事件分类时间间隔
+    /// - Returns: 结果
+    func incidentInTimePeriod(peroid timePeroid: TimePeriod, type: DataTimeIntervalType) -> [String: [Incident]] {
         
-        let res = incidents.filter("time >= %@ and time =< %@", timePeroid.start!.date, timePeroid.end!.date)
+        let res = incidents.filter("time >= %@ and time =< %@", timePeroid.start!.date.dateAt(.startOfDay),
+                                   timePeroid.end!.date.dateAt(.endOfDay))
+
+        return res.incidentsSeprateBy(type: type)
+    }
+}
+
+extension Sequence where Element : Incident {
+    
+    func incidentsSeprateBy(type: IncidentData.DataTimeIntervalType) -> [String : [Incident]] {
         
-        let dic = Dictionary(grouping: res) { (ele) -> String in
+        let dic = Dictionary(grouping: self) { (ele) -> String in
             switch type {
             case .Day:
                 return ele.time.dateAt(.startOfDay).toFormat(IncidentData.DateFormat)
             case .Month:
                 return ele.time.dateAt(.startOfMonth).toFormat(IncidentData.DateFormat)
-            case .Week:
+            case .Week, .Hour:
                 return ele.time.dateAt(.startOfWeek).toFormat(IncidentData.DateFormat)
             }
         }
@@ -62,6 +91,7 @@ private func realm() -> Realm{
     return rl
 }
 
+/// 事件模型
 class Incident: Object {
     
     enum IncidentType: Int8 {
