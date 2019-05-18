@@ -122,8 +122,9 @@ class HorizontalCollectionView: UICollectionView, UICollectionViewDataSource ,UI
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! Cell
-        if let incidents =  _dataSource[_chartNames[indexPath.row]] {
-            cell.setUpdata(incidents: incidents, intervalType: intervalType)
+        let name = _chartNames[indexPath.row]
+        if let incidents =  _dataSource[name] {
+            cell.setUpdata(incidents: incidents, for: name, of: intervalType)
         }
         return cell
     }
@@ -147,24 +148,57 @@ class HorizontalCollectionView: UICollectionView, UICollectionViewDataSource ,UI
             }
         }
         
-        func setUpdata(incidents:[Incident], intervalType: IncidentData.DataTimeIntervalType) {
-            
+        /// 设置表格数据
+        ///
+        /// - Parameters:
+        ///   - incidents: 表格中的所有事件
+        ///   - startDateString: 表格所在时间段起始时间
+        ///   - intervalType: 时间段类型
+        func setUpdata(incidents:[Incident], for startDateString:String, of intervalType: IncidentData.DataTimeIntervalType) {
+            // 将事件拆分为子时间段
             let dic = incidents.incidentsSeprateBy(type: intervalType.decentType)
-            
-            let _chartNames = dic.keys.sorted(by: { (a, b) -> Bool in
-                return a < b
-            })
             
             var yVals = [BarChartDataEntry]()
             
-            for (index, name) in _chartNames.enumerated() {
-                let data = BarChartDataEntry(x: Double(index), y: Double(dic[name]!.count), data: dic[name]!)
+            // 起始的日期
+            guard let startDate = startDateString.toDate(IncidentData.DateFormat) else {
+                return
+            }
+            
+            // 结束的日期
+            var endDate = startDate.dateAt(.endOfWeek)
+            if intervalType == .Day {
+                endDate = startDate.dateAt(.endOfDay)
+            } else if intervalType == .Month {
+                endDate = startDate.dateAt(.endOfMonth)
+            }
+            
+            // 开始遍历需要遍历的日期
+            var stepType = DateRelatedType.tomorrow
+            var granularity = Calendar.Component.day
+            if intervalType == .Day {
+                stepType = .nearestHour(hour: 1)
+                granularity = .hour
+            }
+            
+            var dates = [DateInRegion]()
+            var iterator = startDate
+            while iterator.isBeforeDate(endDate, orEqual: true, granularity: granularity) {
+                dates.append(iterator)
+                iterator = iterator.dateAt(stepType)
+            }
+            
+            for (index, showDate) in dates.enumerated() {
+                var currentIncidents : [Incident]?
+                if let incidnets = dic[showDate.date.toFormat(IncidentData.DateFormat)] {
+                    currentIncidents = incidnets
+                }
+                
+                let data = BarChartDataEntry(x: Double(index),
+                                             y: Double(currentIncidents != nil ? currentIncidents!.count : 0),
+                                             data: currentIncidents)
                 yVals.append(data)
             }
-            setData(yVals)
-        }
-        
-        func setData(_ yVals: [BarChartDataEntry]) {
             
             var set1: BarChartDataSet! = nil
             if let set = chartView.data?.dataSets.first as? BarChartDataSet {
@@ -173,7 +207,7 @@ class HorizontalCollectionView: UICollectionView, UICollectionViewDataSource ,UI
                 chartView.data?.notifyDataChanged()
                 chartView.notifyDataSetChanged()
             } else {
-                set1 = BarChartDataSet(entries: yVals, label: "The year 2017")
+                set1 = BarChartDataSet(entries: yVals, label: startDateString)
                 set1.colors = ChartColorTemplates.material()
                 set1.drawValuesEnabled = false
                 
