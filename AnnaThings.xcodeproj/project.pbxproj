@@ -16,6 +16,7 @@
 		E92DB5B9226DE28C0020C65F /* AnnaThingsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92DB5B8226DE28C0020C65F /* AnnaThingsUITests.swift */; };
 		E92DB5C9226EB11D0020C65F /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92DB5C8226EB11C0020C65F /* TableViewController.swift */; };
 		E92DB5CB226EB2610020C65F /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92DB5CA226EB2610020C65F /* Utility.swift */; };
+		E940D9A122913584007E7909 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = E940D9A022913584007E7909 /* View.swift */; };
 		E993B8DA226EC2D9002F33A4 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = E993B8D9226EC2D9002F33A4 /* Models.swift */; };
 		E993B8DC226EDC68002F33A4 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E993B8DB226EDC68002F33A4 /* DataViewController.swift */; };
 /* End PBXBuildFile section */
@@ -56,6 +57,7 @@
 		E92DB5BA226DE28C0020C65F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E92DB5C8226EB11C0020C65F /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		E92DB5CA226EB2610020C65F /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		E940D9A022913584007E7909 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		E993B8D9226EC2D9002F33A4 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		E993B8DB226EDC68002F33A4 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
 		EA5EDAE014409511385E8FE1 /* libPods-AnnaThingsUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AnnaThingsUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +136,7 @@
 				E92DB598226DE28B0020C65F /* AppDelegate.swift */,
 				E92DB5C8226EB11C0020C65F /* TableViewController.swift */,
 				E993B8DB226EDC68002F33A4 /* DataViewController.swift */,
+				E940D9A022913584007E7909 /* View.swift */,
 				E92DB5CA226EB2610020C65F /* Utility.swift */,
 				E993B8D9226EC2D9002F33A4 /* Models.swift */,
 				E92DB59C226DE28B0020C65F /* Main.storyboard */,
@@ -345,6 +348,7 @@
 			files = (
 				E92DB599226DE28B0020C65F /* AppDelegate.swift in Sources */,
 				E92DB5C9226EB11D0020C65F /* TableViewController.swift in Sources */,
+				E940D9A122913584007E7909 /* View.swift in Sources */,
 				E993B8DC226EDC68002F33A4 /* DataViewController.swift in Sources */,
 				E92DB5CB226EB2610020C65F /* Utility.swift in Sources */,
 				E993B8DA226EC2D9002F33A4 /* Models.swift in Sources */,
