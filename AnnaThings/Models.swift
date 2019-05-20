@@ -82,6 +82,34 @@ extension Sequence where Element : Incident {
         }
         return dic
     }
+    
+    var peeIncidentCount: Int {
+        get {
+            return countForType(Incident.IncidentType.pee)
+        }
+    }
+    
+    var pupuIncidentCount: Int {
+        get {
+            return countForType(Incident.IncidentType.pupu)
+        }
+    }
+    
+    private func countForType(_ type: Incident.IncidentType) -> Int {
+        var count = 0
+        for inci in self {
+            if inci.type == type {
+                count += 1
+            }
+        }
+        return count
+    }
+}
+
+extension Int8 {
+    static func == (left: Int8, right: Incident.IncidentType) -> Bool {
+        return left == right.rawValue
+    }
 }
 
 // MARK: - 数据
@@ -97,6 +125,9 @@ class Incident: Object {
     enum IncidentType: Int8 {
         case pee
         case pupu
+        static func == (left: IncidentType, right: Int8) -> Bool {
+            return left.rawValue == right
+        }
     }
     
     @objc dynamic var time: Date = Date()

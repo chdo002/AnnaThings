@@ -73,7 +73,7 @@ class HorizontalCollectionView: UICollectionView, UICollectionViewDataSource ,UI
             super.init(frame: frame)
             backgroundColor = .black
             chartView = BarChartView(frame: CGRect.zero)
-            chartView.backgroundColor = .cyan
+            chartView.backgroundColor = .white
             chartView.rightAxis.enabled = false
             
             let yaixs = chartView.leftAxis
@@ -133,21 +133,16 @@ class HorizontalCollectionView: UICollectionView, UICollectionViewDataSource ,UI
             }
             
             for (index, showDate) in dates.enumerated() {
-                var currentIncidents : [Incident]?
+                
+                var data : BarChartDataEntry = BarChartDataEntry()
                 
                 if let incidnets = dic[showDate.date.toFormat(IncidentData.DateFormat)] {
-                    currentIncidents = incidnets
+                    data = BarChartDataEntry(x: Double(index),
+                                             yValues: [Double(incidents.peeIncidentCount), Double(incidents.pupuIncidentCount)],
+                                             data: incidnets)
+                } else {
+                    data = BarChartDataEntry(x: Double(index), yValues: [0,0], data: nil)
                 }
-                
-                //TODO: 分类 
-                
-                let yValues = [Double(currentIncidents != nil ? currentIncidents!.count : 0), 1]
-                
-                let data = BarChartDataEntry(x: Double(index),
-                                             yValues: yValues,
-                                             data: currentIncidents)
-                
-                
                 yVals.append(data)
             }
             
@@ -202,6 +197,15 @@ class HorizontalCollectionView: UICollectionView, UICollectionViewDataSource ,UI
                             dataSetIndex: Int,
                             viewPortHandler: ViewPortHandler?) -> String {
             
+            if let incidents = entry.data as? [Incident], let first = incidents.first {
+                if first.type == Incident.IncidentType.pee {
+                    return "\(Int(value))次"
+                }
+                
+                if first.type == Incident.IncidentType.pupu {
+                    return "\(Int(value))次"
+                }
+            }
             return "\(Int(value))次"
         }
     }
