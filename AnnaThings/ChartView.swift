@@ -74,13 +74,13 @@ class HorizontalCollectionView: UICollectionView, UICollectionViewDataSource ,UI
         
         override init(frame: CGRect) {
             super.init(frame: frame)
-            backgroundColor = .black
+            
             chartView = BarChartView(frame: CGRect.zero)
             chartView.backgroundColor = .white
             chartView.rightAxis.enabled = false
-            
+            chartView.doubleTapToZoomEnabled = false
+            chartView.pinchZoomEnabled = false
             let yaixs = chartView.leftAxis
-//            yaixs.drawLabelsEnabled = false
             yaixs.granularity = 1
             yaixs.axisMinimum = 0
             
@@ -138,33 +138,33 @@ class HorizontalCollectionView: UICollectionView, UICollectionViewDataSource ,UI
             for (index, showDate) in dates.enumerated() {
                 
                 var data : BarChartDataEntry = BarChartDataEntry()
-                
-                if let incidnets = dic[showDate.date.toFormat(IncidentData.DateFormat)] {
-                    let count = incidents.peeIncidentCount
-                    let coun2 = incidents.pupuIncidentCount
-                    print("\(count)  \(coun2)")
+                if let incidnetsOfPeriod = dic[showDate.date.toFormat(IncidentData.DateFormat)] {
+                    let peeAndPupuTimes = [Double(incidnetsOfPeriod.peeIncidentCount),
+                                           Double(incidnetsOfPeriod.pupuIncidentCount)]
                     data = BarChartDataEntry(x: Double(index),
-                                             yValues: [Double(incidents.peeIncidentCount), Double(incidents.pupuIncidentCount)],
-                                             data: incidnets)
+                                             yValues: peeAndPupuTimes,
+                                             data: incidnetsOfPeriod)
                 } else {
                     data = BarChartDataEntry(x: Double(index), yValues: [0,0], data: nil)
                 }
                 yVals.append(data)
             }
             
-            var set1: BarChartDataSet! = nil
+            var dataSet: BarChartDataSet! = nil
             if let set = chartView.data?.dataSets.first as? BarChartDataSet {
-                set1 = set
-                set1.replaceEntries(yVals)
+                dataSet = set
+                dataSet.replaceEntries(yVals)
                 chartView.data?.notifyDataChanged()
                 chartView.notifyDataSetChanged()
             } else {
-                set1 = BarChartDataSet(entries: yVals, label: startDateString)
-                set1.colors = [ChartColorTemplates.material()[3],ChartColorTemplates.material()[1]]
-                set1.drawValuesEnabled = true
-                set1.valueFormatter = BarValueFormatter()
-                
-                let data = BarChartData(dataSet: set1)
+                dataSet = BarChartDataSet(entries: yVals, label: startDateString)
+                dataSet.colors = [ChartColorTemplates.material()[3],ChartColorTemplates.material()[1]]
+                dataSet.stackLabels = ["嘘嘘", "噗噗"]
+                dataSet.drawValuesEnabled = true
+                dataSet.valueFormatter = DefaultValueFormatter(block: { (value, entry, dataSetIndex, _) -> String in
+                    return "\(Int(value))次"
+                })
+                let data = BarChartData(dataSet: dataSet)
                 data.setValueFont(UIFont(name: "HelveticaNeue-Light", size: 10)!)
                 data.barWidth = 0.8
                 chartView.data = data
@@ -196,24 +196,5 @@ class HorizontalCollectionView: UICollectionView, UICollectionViewDataSource ,UI
             return ""
         }
     }
-    
-    class BarValueFormatter: IValueFormatter {
-        func stringForValue(_ value: Double,
-                            entry: ChartDataEntry,
-                            dataSetIndex: Int,
-                            viewPortHandler: ViewPortHandler?) -> String {
-            
-            if let incidents = entry.data as? [Incident], let first = incidents.first {
-                if first.type == Incident.IncidentType.pee {
-                    return "\(Int(value))次"
-                }
-                
-                if first.type == Incident.IncidentType.pupu {
-                    return "\(Int(value))次"
-                }
-            }
-            return "\(Int(value))次"
-        }
-    }
-    
+
 }

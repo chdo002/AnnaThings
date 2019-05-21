@@ -16,9 +16,13 @@ class DataViewController: UIViewController {
     
     let dataSource = IncidentData()
     
-    var period :TimePeriod {
-        return TimePeriod(start: dataSource.incidentBoundary.0!.time.inDefaultRegion(),
-                          end: dataSource.incidentBoundary.1!.time.inDefaultRegion())
+    var period :TimePeriod? {
+        if let start = dataSource.incidentBoundary.0, let end = dataSource.incidentBoundary.1 {
+            return TimePeriod(start: start.time.inDefaultRegion(),
+                              end: end.time.inDefaultRegion())
+        } else {
+            return nil
+        }
     }
     
     
@@ -57,6 +61,9 @@ class DataViewController: UIViewController {
     
     
     @objc func tapSeg(_ seg: UISegmentedControl) {
+        if seg.selectedSegmentIndex != 1 {
+            return
+        }
         // 数据时间段
         collectoinView.intervalType = seg.intervalType
         collectoinView.incidentDataSource = dataSource.incidentInTimePeriod(peroid: period,

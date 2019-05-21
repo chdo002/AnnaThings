@@ -57,12 +57,16 @@ struct IncidentData {
     ///   - timePeroid: 搜索事件的时间范围
     ///   - type: 事件分类时间间隔
     /// - Returns: 结果
-    func incidentInTimePeriod(peroid timePeroid: TimePeriod, type: DataTimeIntervalType) -> [String: [Incident]] {
+    func incidentInTimePeriod(peroid timePeroid: TimePeriod?, type: DataTimeIntervalType) -> [String: [Incident]] {
         
-        let res = incidents.filter("time >= %@ and time =< %@", timePeroid.start!.date.dateAt(.startOfDay),
-                                   timePeroid.end!.date.dateAt(.endOfDay))
-
-        return res.incidentsSeprateBy(type: type)
+        if let period = timePeroid {
+            let res = incidents.filter("time >= %@ and time =< %@", period.start!.date.dateAt(.startOfDay),
+                                       period.end!.date.dateAt(.endOfDay))
+            
+            return res.incidentsSeprateBy(type: type)
+        } else {
+            return [:]
+        }
     }
 }
 
