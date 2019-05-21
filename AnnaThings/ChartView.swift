@@ -16,6 +16,8 @@ class HorizontalCollectionView: UICollectionView, UICollectionViewDataSource ,UI
     private var _dataSource: [String: [Incident]] = [:]
     private var _chartNames:[String] = []
     
+    let chatViewDelegate = ChartViewDel()
+    
     var intervalType = IncidentData.DataTimeIntervalType.Week
     
     var incidentDataSource: [String: [Incident]] {
@@ -53,6 +55,7 @@ class HorizontalCollectionView: UICollectionView, UICollectionViewDataSource ,UI
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! Cell
+        cell.chartView.delegate = chatViewDelegate
         let name = _chartNames[indexPath.row]
         if let incidents =  _dataSource[name] {
             cell.setUpdata(incidents: incidents, for: name, of: intervalType)
@@ -137,6 +140,9 @@ class HorizontalCollectionView: UICollectionView, UICollectionViewDataSource ,UI
                 var data : BarChartDataEntry = BarChartDataEntry()
                 
                 if let incidnets = dic[showDate.date.toFormat(IncidentData.DateFormat)] {
+                    let count = incidents.peeIncidentCount
+                    let coun2 = incidents.pupuIncidentCount
+                    print("\(count)  \(coun2)")
                     data = BarChartDataEntry(x: Double(index),
                                              yValues: [Double(incidents.peeIncidentCount), Double(incidents.pupuIncidentCount)],
                                              data: incidnets)
