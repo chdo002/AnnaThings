@@ -24,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                                           true).first {
             print(path)
         }
+        
         #endif
         
         return true

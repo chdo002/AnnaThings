@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0A279AEB93BCCB068B904FD0 /* libPods-AnnaThings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6520A43E83D03EFC02B876C1 /* libPods-AnnaThings.a */; };
+		0D6E8D33A83C2A29C4F3DFE9 /* libPods-AnnalThEx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A2149967C7CB77F17061576F /* libPods-AnnalThEx.a */; };
 		E92DB599226DE28B0020C65F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92DB598226DE28B0020C65F /* AppDelegate.swift */; };
 		E92DB59E226DE28B0020C65F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E92DB59C226DE28B0020C65F /* Main.storyboard */; };
 		E92DB5A0226DE28C0020C65F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E92DB59F226DE28C0020C65F /* Assets.xcassets */; };
@@ -19,6 +20,10 @@
 		E940D9A122913584007E7909 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E940D9A022913584007E7909 /* ChartView.swift */; };
 		E993B8DA226EC2D9002F33A4 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = E993B8D9226EC2D9002F33A4 /* Models.swift */; };
 		E993B8DC226EDC68002F33A4 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E993B8DB226EDC68002F33A4 /* DataViewController.swift */; };
+		E999A9CC22E6F34C00C71F7F /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E999A9CB22E6F34C00C71F7F /* NotificationCenter.framework */; };
+		E999A9CF22E6F34C00C71F7F /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E999A9CE22E6F34C00C71F7F /* TodayViewController.swift */; };
+		E999A9D222E6F34C00C71F7F /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E999A9D022E6F34C00C71F7F /* MainInterface.storyboard */; };
+		E999A9D622E6F34C00C71F7F /* AnnalThEx.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E999A9CA22E6F34C00C71F7F /* AnnalThEx.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E9E1162E2294198600AB8E67 /* ChartViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E1162D2294198600AB8E67 /* ChartViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,13 +42,37 @@
 			remoteGlobalIDString = E92DB594226DE28B0020C65F;
 			remoteInfo = AnnaThings;
 		};
+		E999A9D422E6F34C00C71F7F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E92DB58D226DE28B0020C65F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E999A9C922E6F34C00C71F7F;
+			remoteInfo = AnnalThEx;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		E999A9DA22E6F34C00C71F7F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E999A9D622E6F34C00C71F7F /* AnnalThEx.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		1633D30FCA64B23C2F24078F /* Pods-AnnalThEx.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnnalThEx.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnnalThEx/Pods-AnnalThEx.debug.xcconfig"; sourceTree = "<group>"; };
 		21C84F363721386E106CCC12 /* Pods-AnnaThings.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnnaThings.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnnaThings/Pods-AnnaThings.release.xcconfig"; sourceTree = "<group>"; };
 		3058C12007C03BCCE1700668 /* Pods-AnnaThings.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnnaThings.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnnaThings/Pods-AnnaThings.debug.xcconfig"; sourceTree = "<group>"; };
 		379B787E26571C6CE70AAD85 /* libPods-AnnaThingsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AnnaThingsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6520A43E83D03EFC02B876C1 /* libPods-AnnaThings.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AnnaThings.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A409C6B110A317EF8454A6E /* Pods-AnnalThEx.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnnalThEx.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnnalThEx/Pods-AnnalThEx.release.xcconfig"; sourceTree = "<group>"; };
+		A2149967C7CB77F17061576F /* libPods-AnnalThEx.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AnnalThEx.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E92DB595226DE28B0020C65F /* AnnaThings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnnaThings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E92DB598226DE28B0020C65F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E92DB59D226DE28B0020C65F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -61,6 +90,13 @@
 		E940D9A022913584007E7909 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		E993B8D9226EC2D9002F33A4 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		E993B8DB226EDC68002F33A4 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
+		E999A9CA22E6F34C00C71F7F /* AnnalThEx.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = AnnalThEx.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		E999A9CB22E6F34C00C71F7F /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		E999A9CE22E6F34C00C71F7F /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		E999A9D122E6F34C00C71F7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		E999A9D322E6F34C00C71F7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E999A9DB22E6FFAD00C71F7F /* AnnalThEx.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AnnalThEx.entitlements; sourceTree = "<group>"; };
+		E999A9DC22E6FFBD00C71F7F /* AnnaThings.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AnnaThings.entitlements; sourceTree = "<group>"; };
 		E9E1162D2294198600AB8E67 /* ChartViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewDelegate.swift; sourceTree = "<group>"; };
 		EA5EDAE014409511385E8FE1 /* libPods-AnnaThingsUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AnnaThingsUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -88,6 +124,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E999A9C722E6F34C00C71F7F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E999A9CC22E6F34C00C71F7F /* NotificationCenter.framework in Frameworks */,
+				0D6E8D33A83C2A29C4F3DFE9 /* libPods-AnnalThEx.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -96,6 +141,8 @@
 			children = (
 				3058C12007C03BCCE1700668 /* Pods-AnnaThings.debug.xcconfig */,
 				21C84F363721386E106CCC12 /* Pods-AnnaThings.release.xcconfig */,
+				1633D30FCA64B23C2F24078F /* Pods-AnnalThEx.debug.xcconfig */,
+				6A409C6B110A317EF8454A6E /* Pods-AnnalThEx.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -106,6 +153,8 @@
 				6520A43E83D03EFC02B876C1 /* libPods-AnnaThings.a */,
 				379B787E26571C6CE70AAD85 /* libPods-AnnaThingsTests.a */,
 				EA5EDAE014409511385E8FE1 /* libPods-AnnaThingsUITests.a */,
+				E999A9CB22E6F34C00C71F7F /* NotificationCenter.framework */,
+				A2149967C7CB77F17061576F /* libPods-AnnalThEx.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -116,6 +165,7 @@
 				E92DB597226DE28B0020C65F /* AnnaThings */,
 				E92DB5AC226DE28C0020C65F /* AnnaThingsTests */,
 				E92DB5B7226DE28C0020C65F /* AnnaThingsUITests */,
+				E999A9CD22E6F34C00C71F7F /* AnnalThEx */,
 				E92DB596226DE28B0020C65F /* Products */,
 				128DB2DD743AB2B3E1A6A9E4 /* Pods */,
 				68406E9F4D171BCA3D2FF48C /* Frameworks */,
@@ -128,6 +178,7 @@
 				E92DB595226DE28B0020C65F /* AnnaThings.app */,
 				E92DB5A9226DE28C0020C65F /* AnnaThingsTests.xctest */,
 				E92DB5B4226DE28C0020C65F /* AnnaThingsUITests.xctest */,
+				E999A9CA22E6F34C00C71F7F /* AnnalThEx.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -135,6 +186,7 @@
 		E92DB597226DE28B0020C65F /* AnnaThings */ = {
 			isa = PBXGroup;
 			children = (
+				E999A9DC22E6FFBD00C71F7F /* AnnaThings.entitlements */,
 				E92DB598226DE28B0020C65F /* AppDelegate.swift */,
 				E92DB5C8226EB11C0020C65F /* TableViewController.swift */,
 				E993B8DB226EDC68002F33A4 /* DataViewController.swift */,
@@ -168,6 +220,17 @@
 			path = AnnaThingsUITests;
 			sourceTree = "<group>";
 		};
+		E999A9CD22E6F34C00C71F7F /* AnnalThEx */ = {
+			isa = PBXGroup;
+			children = (
+				E999A9DB22E6FFAD00C71F7F /* AnnalThEx.entitlements */,
+				E999A9CE22E6F34C00C71F7F /* TodayViewController.swift */,
+				E999A9D022E6F34C00C71F7F /* MainInterface.storyboard */,
+				E999A9D322E6F34C00C71F7F /* Info.plist */,
+			);
+			path = AnnalThEx;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -180,10 +243,12 @@
 				E92DB592226DE28B0020C65F /* Frameworks */,
 				E92DB593226DE28B0020C65F /* Resources */,
 				1F1D5F788ED14FDA4BC3A398 /* [CP] Copy Pods Resources */,
+				E999A9DA22E6F34C00C71F7F /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E999A9D522E6F34C00C71F7F /* PBXTargetDependency */,
 			);
 			name = AnnaThings;
 			productName = AnnaThings;
@@ -226,19 +291,42 @@
 			productReference = E92DB5B4226DE28C0020C65F /* AnnaThingsUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		E999A9C922E6F34C00C71F7F /* AnnalThEx */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E999A9D922E6F34C00C71F7F /* Build configuration list for PBXNativeTarget "AnnalThEx" */;
+			buildPhases = (
+				287B552760A81E0611A26A13 /* [CP] Check Pods Manifest.lock */,
+				E999A9C622E6F34C00C71F7F /* Sources */,
+				E999A9C722E6F34C00C71F7F /* Frameworks */,
+				E999A9C822E6F34C00C71F7F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AnnalThEx;
+			productName = AnnalThEx;
+			productReference = E999A9CA22E6F34C00C71F7F /* AnnalThEx.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		E92DB58D226DE28B0020C65F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1020;
+				LastSwiftUpdateCheck = 1030;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = chdo;
 				TargetAttributes = {
 					E92DB594226DE28B0020C65F = {
 						CreatedOnToolsVersion = 10.2.1;
 						LastSwiftMigration = 1020;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					E92DB5A8226DE28C0020C65F = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -247,6 +335,14 @@
 					E92DB5B3226DE28C0020C65F = {
 						CreatedOnToolsVersion = 10.2.1;
 						TestTargetID = E92DB594226DE28B0020C65F;
+					};
+					E999A9C922E6F34C00C71F7F = {
+						CreatedOnToolsVersion = 10.3;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -266,6 +362,7 @@
 				E92DB594226DE28B0020C65F /* AnnaThings */,
 				E92DB5A8226DE28C0020C65F /* AnnaThingsTests */,
 				E92DB5B3226DE28C0020C65F /* AnnaThingsUITests */,
+				E999A9C922E6F34C00C71F7F /* AnnalThEx */,
 			);
 		};
 /* End PBXProject section */
@@ -295,6 +392,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E999A9C822E6F34C00C71F7F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E999A9D222E6F34C00C71F7F /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -306,18 +411,42 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-AnnaThings/Pods-AnnaThings-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-AnnaThings/Pods-AnnaThings-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/PKHUD/PKHUDResources.bundle",
+				"${PODS_ROOT}/SwiftDate/Sources/SwiftDate/Formatters/RelativeFormatter/langs",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/PKHUDResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/langs",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AnnaThings/Pods-AnnaThings-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AnnaThings/Pods-AnnaThings-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		287B552760A81E0611A26A13 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AnnalThEx-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6E305D97C1CC3D899DC9BA0A /* [CP] Check Pods Manifest.lock */ = {
@@ -375,6 +504,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E999A9C622E6F34C00C71F7F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E999A9CF22E6F34C00C71F7F /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -387,6 +524,11 @@
 			isa = PBXTargetDependency;
 			target = E92DB594226DE28B0020C65F /* AnnaThings */;
 			targetProxy = E92DB5B5226DE28C0020C65F /* PBXContainerItemProxy */;
+		};
+		E999A9D522E6F34C00C71F7F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E999A9C922E6F34C00C71F7F /* AnnalThEx */;
+			targetProxy = E999A9D422E6F34C00C71F7F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -405,6 +547,14 @@
 				E92DB5A2226DE28C0020C65F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		E999A9D022E6F34C00C71F7F /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E999A9D122E6F34C00C71F7F /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -530,12 +680,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3058C12007C03BCCE1700668 /* Pods-AnnaThings.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = AnnaThings/AnnaThings.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MTLATAGD8N;
+				DEVELOPMENT_TEAM = 62N6ZZKK9A;
 				INFOPLIST_FILE = AnnaThings/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -552,12 +704,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 21C84F363721386E106CCC12 /* Pods-AnnaThings.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = AnnaThings/AnnaThings.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MTLATAGD8N;
+				DEVELOPMENT_TEAM = 62N6ZZKK9A;
 				INFOPLIST_FILE = AnnaThings/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -651,6 +805,50 @@
 			};
 			name = Release;
 		};
+		E999A9D722E6F34C00C71F7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1633D30FCA64B23C2F24078F /* Pods-AnnalThEx.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = AnnalThEx/AnnalThEx.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 62N6ZZKK9A;
+				INFOPLIST_FILE = AnnalThEx/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = chdo.AnnaThings.ann.AnnalThEx;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E999A9D822E6F34C00C71F7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A409C6B110A317EF8454A6E /* Pods-AnnalThEx.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = AnnalThEx/AnnalThEx.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 62N6ZZKK9A;
+				INFOPLIST_FILE = AnnalThEx/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = chdo.AnnaThings.ann.AnnalThEx;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -686,6 +884,15 @@
 			buildConfigurations = (
 				E92DB5C4226DE28C0020C65F /* Debug */,
 				E92DB5C5226DE28C0020C65F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E999A9D922E6F34C00C71F7F /* Build configuration list for PBXNativeTarget "AnnalThEx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E999A9D722E6F34C00C71F7F /* Debug */,
+				E999A9D822E6F34C00C71F7F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

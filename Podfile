@@ -6,13 +6,14 @@ inhibit_all_warnings!
 
 target 'AnnaThings' do
   
-  #  pod 'JTAppleCalendar'
-  pod 'RealmSwift', '3.14.2'
-  pod 'PKHUD', '5.2.1'
+  pod 'RealmSwift', '3.17.1'
+  pod 'PKHUD', '5.3.0'
   pod 'Charts', '3.3.0'
   pod 'SnapKit', '5.0.0'
-  pod 'SwiftDate', '6.0.2'
+  pod 'SwiftDate', '6.0.3'
   
-#  pod 'ChartsRealm'
+end
 
+target 'AnnalThEx' do
+  pod 'SnapKit', '5.0.0'
 end
